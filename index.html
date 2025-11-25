@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="shortcut icon" type="image/x-icon" href="logo.png" />
+  <title>JP Crunch Munch — Premium Snacks</title>
+  <meta name="description" content="JP Crunch Munch — Homemade Murukku, Mixtures, Laddoos, Malts & Masala Powders. Order via WhatsApp." />
+  <!-- single CSS file -->
+  <link rel="stylesheet" href="main.css">
+  <!-- load JS with defer so DOM is ready; main.js contains DOMContentLoaded safety as well -->
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="wrap" role="banner">
+    <div class="brand" aria-hidden="false">
+      <div class="logo"><img id="logoImg" src="/mnt/data/download.png" alt="JP Crunch Munch logo" /></div>
+      <div class="brand-title">JP Crunch Munch</div>
+    </div>
+
+    <nav aria-label="Main navigation" class="main-nav">
+      <a href="#hero">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="controls">
+      <button id="darkToggle" aria-pressed="false" title="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="wrap" style="padding-bottom:120px">
+    <section class="hero" id="hero" aria-label="hero">
+      <div class="text">
+        <h1>Traditional Snacks, Freshly Made.</h1>
+        <p class="lead">Handmade Murukku, Mixtures, Dry Fruit Laddoos, Malts & Masala Powders — family recipes, premium ingredients, no preservatives.</p>
+
+        <div class="hero-actions">
+          <a href="#products" class="btn-cta small">Shop Bestsellers</a>
+          <button id="orderQuick" class="btn-outline">Order via WhatsApp</button>
+        </div>
+
+        <!-- Animated counters -->
+        <div class="counters" aria-hidden="false">
+          <div class="counter"><strong data-target="1200">0</strong><span>Orders Delivered</span></div>
+          <div class="counter"><strong data-target="250">0</strong><span>Products Sold</span></div>
+          <div class="counter"><strong data-target="5">0</strong><span>Years of Taste</span></div>
+        </div>
+      </div>
+
+      <img id="heroImg" src="/mnt/data/A_website_homepage_for_JP_Crunch_Munch,_an_Indian_.png" alt="Hero image">
+    </section>
+
+    <!-- Product Section -->
+    <h2 class="section-title" id="products">Our Bestsellers</h2>
+    <div class="grid" id="productGrid" aria-live="polite"></div>
+
+    <!-- About + Contact form -->
+    <section id="about" class="section">
+      <div class="two-col">
+
+        <div>
+          <h3>About JP Crunch Munch</h3>
+          <p>JP Crunch Munch is a homemade snack brand producing Murukku, Mixtures, Dry Fruit Laddoos, Malts, and Masala Powders using traditional recipes and premium ingredients. We pack festival-ready gift sets and accept custom orders.</p>
+
+          <h4>Contact & Orders</h4>
+          <form id="contactForm" class="contact" novalidate>
+            <input id="name" name="name" placeholder="Your name" required />
+            <input id="phone" name="phone" placeholder="Phone / WhatsApp number" required inputmode="tel" />
+            <textarea id="message" name="message" placeholder="Your message / order (e.g. 2 x Garlic Murukku)" rows="4" required></textarea>
+            <div class="form-actions">
+              <button type="submit" class="btn-cta">Send via WhatsApp</button>
+              <button type="button" id="contactReset" class="btn-outline">Reset</button>
+            </div>
+            <div id="formNote" class="form-note">We'll open WhatsApp with a prefilled message so you can confirm before sending.</div>
+          </form>
+        </div>
+        <br>
+          <h1 class="h1ig"> Product Gallery </h1>
+        <br>
+        <div>
+          <img src="5.png" alt="laddoo" class="side-image">
+        </div>
+        <br>
+        <div>
+          <img src="7.png" alt="laddoo" class="side-image">
+        </div>
+        <br>
+        <div>
+          <img src="9.png" alt="laddoo" class="side-image">
+        </div>
+        <br>
+        <div>
+          <img src="11.png" alt="laddoo" class="side-image">
+        </div>
+        <br>
+        <div>
+          <img src="13.png" alt="laddoo" class="side-image">
+        </div>
+        <br>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews">
+      <h2 class="section-title">Customer Reviews</h2>
+
+      <div class="review-carousel">
+        <div class="review-track" id="reviewTrack">
+          <!-- small set of review-cards (JS will also duplicate when needed) -->
+          <div class="review-card">
+            <p>“The Garlic Murukku is super fresh & crispy. Packaging feels premium!”</p>
+            <h4>- Priya S.</h4>
+          </div>
+          <div class="review-card">
+            <p>“Ribbon Murukku tastes exactly like homemade. Loved the crunch ❣️”</p>
+            <h4>- Karthik R.</h4>
+          </div>
+          <div class="review-card">
+            <p>“Best mixture I’ve ever had. Not too spicy — perfect balance!”</p>
+            <h4>- Meena</h4>
+          </div>
+          <div class="review-card">
+            <p>“Dry fruit laddoos were soft and healthy. Great gift item!”</p>
+            <h4>- Vishnu</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <section id="contact">
+      <h2 class="section-title">Reach Us</h2>
+      <p class="muted-center">Contact us on WhatsApp for custom or bulk orders.</p>
+    </section>
+
+  </main>
+
+  <!-- Sticky order bar -->
+  <div class="order-bar hidden" id="orderBar">
+    <div>
+      <div class="txt">Order directly on WhatsApp</div>
+      <div class="mini">Fast replies • Custom orders • Bulk packs</div>
+    </div>
+    <button class="btn-cta" id="orderNow">Order Now</button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-card" id="modalCard" role="dialog" aria-modal="true">
+      <!-- content inserted by JS -->
+    </div>
+  </div>
+</body>
+</html>
