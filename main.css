@@ -2,7 +2,8 @@
    Theme variables & reset
    ====================== */
 html{
-      scrollbar-behavior: smooth;
+      scroll-behavior: smooth;
+
 }
 :root{
   --bg: #fbf7f3;
